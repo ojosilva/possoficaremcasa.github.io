@@ -17,13 +17,17 @@
                 color: #ee3d3d;
             }
             .ana {
+                width: 60%;
+                margin-right: auto;
+                margin-left: auto;
                 color: #fff;
                 font-family: Arial, sans-serif;
             }
             .status {
                 display: block;
                 font-size: 1.2em;
-                line-height: 30px;
+                margin: 16px 0 16px 0;
+                line-height: 20px;
             }
             .chk {
                 display: none;
@@ -220,7 +224,7 @@
                 return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
             }
 
-            var ts = 200;
+            var ts = 170;
 
             setTimeout(function(){
                 pusher( 'Analizando a densidade geográfica local' );
