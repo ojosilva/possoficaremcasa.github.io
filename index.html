@@ -3,13 +3,13 @@
     <head>
         <style>
             body {
-                background: #000;
-                color: #fff;
+                background: #101010;
+                color: #f0f0f3;
                 font-family: Verdana, sans-serif;
             }
             .res {
                 height: 150px;
-                font-size: 6em;
+                font-size: calc(6em + 1vw);
                 font-weight: 800;
                 padding-top: 50px;
                 vertical-align: middle;
@@ -20,14 +20,19 @@
                 width: 60%;
                 margin-right: auto;
                 margin-left: auto;
-                color: #fff;
                 font-family: Arial, sans-serif;
+            }
+            .warn {
+                font-weight: 800;
+                background: #eec110;
+                color: #202020;
+                line-height: 80px;
             }
             .status {
                 display: block;
-                font-size: 1.2em;
-                margin: 16px 0 16px 0;
-                line-height: 20px;
+                font-size: calc(0.7em + 1vw);
+                margin: 26px 0 26px 0;
+                line-height: 34px;
             }
             .chk {
                 display: none;
@@ -260,7 +265,7 @@
                 pusher( '<p>Cada pessoa ao falar, espirrar ou tossir libera aproximadamente 500,000 partículas 🦠 do vírus!</p>'+
                     '<p>Na sua região, em '+date+' às '+hora+' tem aproximadamente ' + numberWithCommas(num + '' + num2) +
                     ' de possíveis partículas 🦠 do coronavírus no ar e nas superfícies.</p>' +
-                    '<p>Faça a sua parte e fique na sua casa!<p>', '', '' );
+                    '<p class="warn">Faça a sua parte e fique na sua casa!<p>', '', '' );
             }, 100 * ts);
         </script>
     </body>
