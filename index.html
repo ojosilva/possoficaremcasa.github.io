@@ -9,7 +9,7 @@
             }
             .res {
                 height: 150px;
-                font-size: calc(6em + 1vw);
+                font-size: calc(6em + 2vw);
                 font-weight: 800;
                 padding-top: 50px;
                 vertical-align: middle;
@@ -22,21 +22,27 @@
                 margin-left: auto;
                 font-family: Arial, sans-serif;
             }
+            .status {
+                display: block;
+                font-size: calc(0.9 * 2.5vw);
+                margin: 26px 0 26px 0;
+                line-height: calc(0.9 * 3vw);
+            }
+            .chk {
+                display: none;
+                color: #10e040;
+            }
+            .counter {
+                font-weight: 800;
+                background: #444;
+                color: #eec110;
+                padding: 0 12px 0 12px;
+            }
             .warn {
                 font-weight: 800;
                 background: #eec110;
                 color: #202020;
                 line-height: 80px;
-            }
-            .status {
-                display: block;
-                font-size: calc(0.7em + 1vw);
-                margin: 26px 0 26px 0;
-                line-height: 34px;
-            }
-            .chk {
-                display: none;
-                color: #10e040;
             }
             .center1 {
                 text-align: center;
@@ -263,7 +269,7 @@
                 var num = Math.floor( Math.random(1000) * 1000000000 );
                 var num2 = Math.floor( Math.random(1000) * 1000000000 );
                 pusher( '<p>Cada pessoa ao falar, espirrar ou tossir libera aproximadamente 500,000 partículas 🦠 do vírus!</p>'+
-                    '<p>Na sua região, em '+date+' às '+hora+' tem aproximadamente ' + numberWithCommas(num + '' + num2) +
+                    '<p>Na sua região, em '+date+' às '+hora+' tem aproximadamente <span class="counter">' + numberWithCommas(num + '' + num2) + '</span>' +
                     ' de possíveis partículas 🦠 do coronavírus no ar e nas superfícies.</p>' +
                     '<p class="warn">Faça a sua parte e fique na sua casa!<p>', '', '' );
             }, 100 * ts);
